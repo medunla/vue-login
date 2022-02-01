@@ -3,3 +3,14 @@ node_modules
 dist
 dist-ssr
 *.local
+
+# local env files
+.env
+.env.local
+.env.*.local
+
+# Log files
+npm-debug.log*
+
+# Editor directories and files
+.vscode
