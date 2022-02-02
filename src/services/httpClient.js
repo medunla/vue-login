@@ -3,7 +3,7 @@ import { interceptorRequest, interceptorRequestError } from '@/services/intercep
 import { interceptorResponse, interceptorResponseError } from '@/services/interceptors/response';
 
 const httpClient = axios.create({
-	baseURL: process.env.VUE_APP_API_URL,
+	baseURL: import.meta.env.VITE_APP_API_URL,
 	timeout: 180000, // 3 mins
 	headers: {
 		'Content-Type': 'application/json',
