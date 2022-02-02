@@ -12,6 +12,7 @@ export default {
 
 		return {
 			isLoggedIn,
+			handleLogout: () => store.dispatch('auth/logout'),
 		};
 	},
 };
@@ -20,7 +21,15 @@ export default {
 <template>
 	<div>
 		<h1>Home.vue</h1>
-		<p v-if="isLoggedIn">You are logged in</p>
+		<template v-if="isLoggedIn">
+			<h3>You are logged in</h3>
+			<button
+				type="button"
+				@click="handleLogout"
+			>
+				Logout
+			</button>
+		</template>
 		<login-form v-else />
 	</div>
 </template>
